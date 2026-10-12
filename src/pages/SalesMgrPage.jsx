@@ -49,26 +49,26 @@ export default function SalesMgrPage() {
   return (
 <section>
         <div className="mb-6">
-          <h1 className="text-2xl font-extrabold text-slate-800">{t("\u0644\u0648\u062d\u0629 \u0645\u062f\u064a\u0631 \u0627\u0644\u0645\u0628\u064a\u0639\u0627\u062a")}</h1>
-          <p className="text-[14px] text-slate-400 mt-1">{t("\u0627\u0639\u062a\u0645\u0627\u062f \u0646\u0647\u0627\u0626\u064a \u0644\u0644\u0639\u0631\u0648\u0636 \u0648\u0627\u0644\u062e\u0635\u0648\u0645\u0627\u062a \u00b7 \u0627\u0644\u062a\u0633\u0644\u064a\u0645 \u0644\u0644\u062a\u0634\u063a\u064a\u0644 \u00b7 \u0627\u0644\u0645\u0633\u062a\u0647\u062f\u0641 \u0648\u0627\u0644\u0639\u0645\u0648\u0644\u0627\u062a \u2014 \u0645\u0646\u0641\u0635\u0644\u0629 \u0639\u0646 \u0645\u064a\u062f\u0627\u0646 \u0627\u0644\u0623\u062e\u0635\u0627\u0626\u064a.")}</p>
+          <h1 className="text-xl sm:text-2xl font-extrabold text-slate-800">{t("\u0644\u0648\u062d\u0629 \u0645\u062f\u064a\u0631 \u0627\u0644\u0645\u0628\u064a\u0639\u0627\u062a")}</h1>
+          <p className="text-[13px] sm:text-[14px] text-slate-400 mt-1">{t("\u0627\u0639\u062a\u0645\u0627\u062f \u0646\u0647\u0627\u0626\u064a \u0644\u0644\u0639\u0631\u0648\u0636 \u0648\u0627\u0644\u062e\u0635\u0648\u0645\u0627\u062a \u00b7 \u0627\u0644\u062a\u0633\u0644\u064a\u0645 \u0644\u0644\u062a\u0634\u063a\u064a\u0644 \u00b7 \u0627\u0644\u0645\u0633\u062a\u0647\u062f\u0641 \u0648\u0627\u0644\u0639\u0645\u0648\u0644\u0627\u062a \u2014 \u0645\u0646\u0641\u0635\u0644\u0629 \u0639\u0646 \u0645\u064a\u062f\u0627\u0646 \u0627\u0644\u0623\u062e\u0635\u0627\u0626\u064a.")}</p>
         </div>
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-          <div className="rounded-2xl bg-white p-5 shadow-card ring-1 ring-slate-100">
-            <div className="text-[12px] text-slate-400 font-bold">{t("\u0628\u0627\u0646\u062a\u0638\u0627\u0631 \u0627\u0639\u062a\u0645\u0627\u062f\u0643")}</div>
-            <div className="text-3xl font-extrabold text-indigo-600 mt-1">{t(mgrQuoteQueue.length)}</div>
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-4 mb-6">
+          <div className="rounded-2xl bg-white p-3.5 sm:p-5 shadow-card ring-1 ring-slate-100">
+            <div className="text-[11px] sm:text-[12px] text-slate-400 font-bold">{t("\u0628\u0627\u0646\u062a\u0638\u0627\u0631 \u0627\u0639\u062a\u0645\u0627\u062f\u0643")}</div>
+            <div className="text-xl sm:text-3xl font-extrabold text-indigo-600 mt-1">{t(mgrQuoteQueue.length)}</div>
           </div>
-          <div className="rounded-2xl bg-white p-5 shadow-card ring-1 ring-slate-100">
-            <div className="text-[12px] text-slate-400 font-bold">{t("\u062c\u0627\u0647\u0632 \u0644\u0644\u062a\u0633\u0644\u064a\u0645")}</div>
-            <div className="text-3xl font-extrabold text-emerald-600 mt-1">{t(salesLeads.filter(l=>l.stage==='signed'||l.stage==='finance'||l.stage==='am').length)}</div>
+          <div className="rounded-2xl bg-white p-3.5 sm:p-5 shadow-card ring-1 ring-slate-100">
+            <div className="text-[11px] sm:text-[12px] text-slate-400 font-bold">{t("\u062c\u0627\u0647\u0632 \u0644\u0644\u062a\u0633\u0644\u064a\u0645")}</div>
+            <div className="text-xl sm:text-3xl font-extrabold text-emerald-600 mt-1">{t(salesLeads.filter(l=>l.stage==='signed'||l.stage==='finance'||l.stage==='am').length)}</div>
           </div>
-          <button className="text-right rounded-2xl bg-ink p-5 shadow-card text-white hover:-translate-y-0.5 transition-all" onClick={() => { openPage('admin'); }} type="button">
-            <div className="text-[12px] text-white/60 font-bold">{t("\u0627\u0644\u0645\u0633\u062a\u0647\u062f\u0641 \u0627\u0644\u0634\u0647\u0631\u064a")}</div>
-            <div className="text-2xl font-extrabold mt-1">{t(salesPct+'٪')}</div>
-            <div className="text-[11px] text-brand-300 mt-1">{t("\u0639\u0645\u0648\u0644\u0627\u062a \u0648\u0645\u0633\u062a\u0647\u062f\u0641 \u2190")}</div>
+          <button className="text-right rounded-2xl bg-ink p-3.5 sm:p-5 shadow-card text-white hover:-translate-y-0.5 transition-all" onClick={() => { openPage('admin'); }} type="button">
+            <div className="text-[11px] sm:text-[12px] text-white/60 font-bold">{t("\u0627\u0644\u0645\u0633\u062a\u0647\u062f\u0641 \u0627\u0644\u0634\u0647\u0631\u064a")}</div>
+            <div className="text-xl sm:text-2xl font-extrabold mt-1">{t(salesPct+'٪')}</div>
+            <div className="text-[10px] sm:text-[11px] text-brand-300 mt-1">{t("\u0639\u0645\u0648\u0644\u0627\u062a \u0648\u0645\u0633\u062a\u0647\u062f\u0641 \u2190")}</div>
           </button>
-          <div className="rounded-2xl bg-white p-5 shadow-card ring-1 ring-slate-100">
-            <div className="text-[12px] text-slate-400 font-bold">{t("\u0645\u062d\u0642\u0651\u0642")}</div>
-            <div className="text-2xl font-extrabold text-slate-800 mt-1 tabular-nums">{t(salesAchieved.toLocaleString())}</div>
+          <div className="rounded-2xl bg-white p-3.5 sm:p-5 shadow-card ring-1 ring-slate-100">
+            <div className="text-[11px] sm:text-[12px] text-slate-400 font-bold">{t("\u0645\u062d\u0642\u0651\u0642")}</div>
+            <div className="text-xl sm:text-2xl font-extrabold text-slate-800 mt-1 tabular-nums">{t(salesAchieved.toLocaleString())}</div>
           </div>
         </div>
 
@@ -77,14 +77,14 @@ export default function SalesMgrPage() {
         <h2 className="text-lg font-extrabold text-slate-800 mb-3">{t("\u0627\u0639\u062a\u0645\u0627\u062f \u0639\u0631\u0648\u0636 / \u062e\u0635\u0648\u0645\u0627\u062a \u0645\u0635\u0639\u0651\u062f\u0629")}</h2>
         <div className="space-y-3 mb-8">
           {(mgrQuoteQueue || []).map((l, index) => (<React.Fragment key={'mgr-'+l.id}>
-            <div className="rounded-2xl bg-white p-5 shadow-card ring-1 ring-slate-100">
-              <div className="flex flex-wrap justify-between gap-3">
+            <div className="rounded-2xl bg-white p-4 sm:p-5 shadow-card ring-1 ring-slate-100">
+              <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3">
                 <div>
                   <b className="text-slate-800">{t(l.client)}</b>
                   <div className="text-[12px] text-slate-400">{t(l.ref+(l.quote?' · '+l.quote.no:''))}</div>
                   {Boolean(l.quote && l.quote.discountPct>10) && (<div className="text-[12px] text-rose-600 font-bold mt-1">{t('خصم خارج السقف: '+l.quote.discountPct+'٪ — يحتاج اعتماد المدير')}</div>)}
                 </div>
-                <div className="font-extrabold text-slate-800">{t(l.quote?l.quote.amount.toLocaleString()+' ر.س':'—')}</div>
+                <div className="text-left font-extrabold text-slate-800 pt-2 sm:pt-0 border-t sm:border-t-0 border-slate-100">{t(l.quote?l.quote.amount.toLocaleString()+' ر.س':'—')}</div>
               </div>
 
               {Boolean(l.quote && l.quote.lines && l.quote.lines.length) && (<React.Fragment>
@@ -131,9 +131,9 @@ export default function SalesMgrPage() {
               </React.Fragment>)}
               <textarea className="field mt-3" value={actionNote ?? ""} onChange={(e) => setProp("actionNote", e.target.value)} rows="2" placeholder={t("\u0645\u0644\u0627\u062d\u0638\u0627\u062a \u0627\u0644\u0627\u0639\u062a\u0645\u0627\u062f \u0627\u0644\u0646\u0647\u0627\u0626\u064a")}></textarea>
               <div className="flex flex-wrap gap-2 mt-3">
-                <button className="px-3 py-2 rounded-xl bg-brand-500 text-white text-[12px] font-bold" onClick={() => { mgrFinalApproveQuote(l); }} type="button">{t("\u0627\u0639\u062a\u0645\u0627\u062f \u0646\u0647\u0627\u0626\u064a \u0644\u0644\u0639\u0631\u0636")}</button>
-                <button className="px-3 py-2 rounded-xl bg-rose-50 text-rose-700 text-[12px] font-bold" onClick={() => { mgrRejectQuote(l); }} type="button">{t("\u0631\u0641\u0636 \u0648\u0625\u0639\u0627\u062f\u0629 \u0644\u0644\u0623\u062e\u0635\u0627\u0626\u064a")}</button>
-                <button className="px-3 py-2 rounded-xl bg-slate-100 text-slate-700 text-[12px] font-bold" onClick={() => { openDrill('lead', l); }} type="button">{t("\u0645\u0644\u0641 \u0627\u0644\u0635\u0641\u0642\u0629")}</button>
+                <button className="flex-1 sm:flex-none text-center px-3 py-2 rounded-xl bg-brand-500 text-white text-[12px] font-bold" onClick={() => { mgrFinalApproveQuote(l); }} type="button">{t("\u0627\u0639\u062a\u0645\u0627\u062f \u0646\u0647\u0627\u0626\u064a \u0644\u0644\u0639\u0631\u0636")}</button>
+                <button className="flex-1 sm:flex-none text-center px-3 py-2 rounded-xl bg-rose-50 text-rose-700 text-[12px] font-bold" onClick={() => { mgrRejectQuote(l); }} type="button">{t("\u0631\u0641\u0636 \u0648\u0625\u0639\u0627\u062f\u0629 \u0644\u0644\u0623\u062e\u0635\u0627\u0626\u064a")}</button>
+                <button className="flex-1 sm:flex-none text-center px-3 py-2 rounded-xl bg-slate-100 text-slate-700 text-[12px] font-bold" onClick={() => { openDrill('lead', l); }} type="button">{t("\u0645\u0644\u0641 \u0627\u0644\u0635\u0641\u0642\u0629")}</button>
               </div>
             </div>
           </React.Fragment>))}
@@ -143,13 +143,13 @@ export default function SalesMgrPage() {
         <h2 className="text-lg font-extrabold text-slate-800 mb-3">{t("\u0627\u0644\u062a\u0633\u0644\u064a\u0645 \u0627\u0644\u0646\u0647\u0627\u0626\u064a \u0644\u0644\u062a\u0634\u063a\u064a\u0644")}</h2>
         <div className="space-y-3 mb-6">
           {(salesLeads.filter(x=>x.stage==='signed'||x.stage==='finance'||x.stage==='am') || []).map((l, index) => (<React.Fragment key={'hand-'+l.id}>
-            <div className="rounded-2xl bg-white p-5 shadow-card ring-1 ring-slate-100 flex flex-wrap items-center justify-between gap-3">
+            <div className="rounded-2xl bg-white p-4 sm:p-5 shadow-card ring-1 ring-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
               <div>
                 <b>{t(l.client)}</b>
                 <div className="text-[12px] text-slate-400">{t((l.contract?l.contract.no:l.ref)+' · '+leadMap[l.stage].t)}</div>
               </div>
-              <div className="flex gap-2">
-                <button className="px-3 py-2 rounded-xl bg-emerald-600 text-white text-[12px] font-bold" onClick={() => { setProp("actionNote", actionNote||'تسليم معتمد من مدير المبيعات'); handover(l); }} type="button">{t("\u062a\u0633\u0644\u064a\u0645 \u0644\u0645\u062f\u064a\u0631 \u0627\u0644\u062d\u0633\u0627\u0628")}</button>
+              <div className="flex items-center gap-2 w-full sm:w-auto">
+                <button className="flex-1 sm:flex-none text-center px-3 py-2 rounded-xl bg-emerald-600 text-white text-[12px] font-bold" onClick={() => { setProp("actionNote", actionNote||'تسليم معتمد من مدير المبيعات'); handover(l); }} type="button">{t("\u062a\u0633\u0644\u064a\u0645 \u0644\u0645\u062f\u064a\u0631 \u0627\u0644\u062d\u0633\u0627\u0628")}</button>
                 <button className="px-3 py-2 rounded-xl bg-slate-100 text-slate-700 text-[12px] font-bold" onClick={() => { openDrill('lead', l); }} type="button">{t("\u062a\u0641\u0627\u0635\u064a\u0644")}</button>
               </div>
             </div>
@@ -158,7 +158,7 @@ export default function SalesMgrPage() {
         </div>
 
         <h2 className="text-lg font-extrabold text-slate-800 mb-3">{t("\u0623\u062f\u0627\u0621 \u0627\u0644\u0641\u0631\u064a\u0642 (\u0639\u0631\u0636 \u0641\u0642\u0637 \u0644\u0644\u0645\u062f\u064a\u0631)")}</h2>
-        <div className="grid sm:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
           <div className="rounded-2xl bg-white p-4 ring-1 ring-slate-100"><div className="text-[12px] text-slate-400">{t("\u0632\u064a\u0627\u0631\u0627\u062a \u0627\u0644\u0623\u062e\u0635\u0627\u0626\u064a \u0647\u0630\u0627 \u0627\u0644\u0634\u0647\u0631")}</div><div className="text-2xl font-extrabold">{t(visitsThisMonth.length)}</div></div>
           <div className="rounded-2xl bg-white p-4 ring-1 ring-slate-100"><div className="text-[12px] text-slate-400">{t("\u0639\u0631\u0648\u0636 \u0645\u0642\u062f\u0651\u0645\u0629")}</div><div className="text-2xl font-extrabold">{t(offersSubmittedCount)}</div></div>
           <div className="rounded-2xl bg-white p-4 ring-1 ring-slate-100"><div className="text-[12px] text-slate-400">{t("\u0639\u0642\u0648\u062f \u0645\u0643\u062a\u0645\u0644\u0629")}</div><div className="text-2xl font-extrabold">{t(clientsFullyActivated)}</div></div>

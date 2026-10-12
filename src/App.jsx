@@ -64,12 +64,13 @@ export default function App() {
             {drawer && (
               <div
                 onClick={() => setProp('drawer', false)}
-                className="fixed inset-0 bg-ink/40 z-40 lg:hidden"
+                className="fixed inset-0 bg-ink/40 z-40 lg:hidden cursor-pointer backdrop-blur-[1px]"
+                aria-hidden="true"
               />
             )}
             <Sidebar />
 
-            <main className="flex-1 min-w-0 px-4 sm:px-6 lg:px-8 py-7 max-w-[1400px] mx-auto w-full">
+            <main className="flex-1 min-w-0 px-3 sm:px-6 lg:px-8 py-4 sm:py-7 max-w-[1400px] mx-auto w-full">
               {page === 'desk' && <DeskPage />}
               {page === 'legal' && <LegalPage />}
               {page === 'hr' && <HrPage />}

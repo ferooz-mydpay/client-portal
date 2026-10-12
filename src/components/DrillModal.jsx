@@ -47,12 +47,12 @@ export default function DrillModal() {
 
 
   return (
-<div className="fixed inset-0 z-[55]" style={parseStyle("display:none")}>
-  <div className="absolute inset-0 bg-ink/55 backdrop-blur-sm" onClick={() => { closeModal(); }}></div>
-  <div className="relative min-h-full flex items-center justify-center p-4">
-    {Boolean(modal.open) && (<div className={clsx("w-full bg-white rounded-3xl shadow-2xl overflow-hidden max-h-[92vh] flex flex-col", (modal.kind==='complaint'||modal.kind==='requestLabor'||modal.kind==='action'||modal.kind==='creditCase'||modal.kind==='quote'||modal.kind==='lead')?'max-w-4xl':'max-w-2xl')}>
-      <div className="flex items-center justify-between gap-3 p-5 border-b border-slate-100"><h3 className="font-extrabold text-slate-800 text-lg">{t(modal.title)}</h3><button className="grid place-items-center h-9 w-9 rounded-xl text-slate-400 hover:bg-slate-100 hover:text-slate-600" onClick={() => { closeModal(); }}><svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg></button></div>
-      <div className="p-6 overflow-y-auto">
+<div className="fixed inset-0 z-[55] overflow-y-auto">
+  <div className="fixed inset-0 bg-ink/55 backdrop-blur-sm" onClick={() => { closeModal(); }}></div>
+  <div className="relative min-h-full flex items-center justify-center p-2 sm:p-4">
+    {Boolean(modal.open) && (<div className={clsx("w-full bg-white rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden max-h-[92vh] flex flex-col my-auto", (modal.kind==='complaint'||modal.kind==='requestLabor'||modal.kind==='action'||modal.kind==='creditCase'||modal.kind==='quote'||modal.kind==='lead')?'max-w-4xl':'max-w-2xl')}>
+      <div className="flex items-center justify-between gap-3 p-4 sm:p-5 border-b border-slate-100"><h3 className="font-extrabold text-slate-800 text-base sm:text-lg">{t(modal.title)}</h3><button className="grid place-items-center h-9 w-9 rounded-xl text-slate-400 hover:bg-slate-100 hover:text-slate-600" onClick={() => { closeModal(); }}><svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg></button></div>
+      <div className="p-4 sm:p-6 overflow-y-auto">
 
         
         {Boolean(modal.kind==='workers') && (<React.Fragment>

@@ -47,10 +47,10 @@ export default function SimLogDrawer() {
 
 
   return (
-<div className={clsx("fixed top-[110px] z-[45] w-[400px] max-w-[calc(100vw-2rem)] bg-white rounded-2xl shadow-2xl ring-1 ring-slate-200 overflow-hidden", lang === "en" ? "right-4" : "left-4")}>
+<div className={clsx("fixed top-16 sm:top-[110px] z-[45] w-[calc(100vw-1.5rem)] sm:w-[400px] max-w-md bg-white rounded-2xl shadow-2xl ring-1 ring-slate-200 overflow-hidden", lang === "en" ? "right-3 sm:right-4" : "left-3 sm:left-4")}>
     <div className="flex items-center justify-between px-4 py-3 border-b border-slate-100 bg-ink text-white">
       <div className="font-extrabold text-[14px] flex items-center gap-2"><span className="h-2 w-2 rounded-full bg-emerald-400 sim-pulse"></span>{t("\u0633\u062c\u0644 \u0627\u0644\u062a\u062f\u0641\u0642 \u0627\u0644\u062d\u064a")}</div>
-      <button className="text-white/60 hover:text-white text-[12px] font-bold" onClick={() => { setProp("showSimLog", false); }}>{t("\u0625\u063a\u0644\u0627\u0642")}</button>
+      <button type="button" className="text-white/60 hover:text-white text-[12px] font-bold cursor-pointer" onClick={() => { setProp("showSimLog", false); }}>{t("\u0625\u063a\u0644\u0627\u0642")}</button>
     </div>
     <div className="max-h-96 overflow-y-auto p-3 space-y-2">
       {(simLog || []).map((e, index) => (<React.Fragment key={e.id}>

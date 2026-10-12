@@ -47,10 +47,10 @@ export default function InboxDrawer() {
 
 
   return (
-<div className={clsx("fixed top-[110px] z-[45] w-[360px] max-w-[calc(100vw-2rem)] bg-white rounded-2xl shadow-2xl ring-1 ring-slate-200 overflow-hidden", lang === "en" ? "right-4" : "left-4")}>
+<div className={clsx("fixed top-16 sm:top-[110px] z-[45] w-[calc(100vw-1.5rem)] sm:w-[360px] max-w-sm bg-white rounded-2xl shadow-2xl ring-1 ring-slate-200 overflow-hidden", lang === "en" ? "right-3 sm:right-4" : "left-3 sm:left-4")}>
     <div className="flex items-center justify-between px-4 py-3 border-b border-slate-100 bg-slate-50">
       <div className="font-extrabold text-slate-800 text-[14px]">{t("\u0635\u0646\u062f\u0648\u0642")} <span>{t((roleMeta[role].name? roleMeta[role].name+' · ':'')+(roleMeta[role].short||roleMeta[role].label))}</span></div>
-      <button className="text-slate-400 hover:text-slate-600 text-[12px] font-bold" onClick={() => { setProp("showInbox", false); }}>{t("\u0625\u063a\u0644\u0627\u0642")}</button>
+      <button type="button" className="text-slate-400 hover:text-slate-600 text-[12px] font-bold cursor-pointer" onClick={() => { setProp("showInbox", false); }}>{t("\u0625\u063a\u0644\u0627\u0642")}</button>
     </div>
     <div className="max-h-80 overflow-y-auto divide-y divide-slate-50">
       {(roleInbox || []).map((n, index) => (<React.Fragment key={n.id}>

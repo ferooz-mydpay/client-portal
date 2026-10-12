@@ -55,21 +55,21 @@ export default function DeskPage() {
           </div>
           <div className="text-[12px] font-bold text-slate-500 bg-slate-100 px-3 py-1.5 rounded-lg">{t(rolePathLabel)}</div>
         </div>
-        <div className="grid grid-cols-2 lg:grid-cols-5 gap-3 mb-6">
-          <div className="rounded-2xl bg-white p-4 shadow-card ring-1 ring-slate-100"><div className="text-2xl font-extrabold text-amber-600">{t(myWork.filter(w=>w.status==='pending').length)}</div><div className="text-[12px] text-slate-400">{t("\u0645\u0639\u0644\u0651\u0642 \u0644\u062f\u064a\u0651")}</div></div>
-          <div className="rounded-2xl bg-white p-4 shadow-card ring-1 ring-slate-100"><div className="text-2xl font-extrabold text-brand-600">{t(myWork.filter(w=>w.status==='replied').length)}</div><div className="text-[12px] text-slate-400">{t("\u062a\u0645 \u0627\u0644\u0631\u062f")}</div></div>
-          <div className="rounded-2xl bg-white p-4 shadow-card ring-1 ring-slate-100"><div className="text-2xl font-extrabold text-emerald-600">{t(myWork.filter(w=>w.status==='approved').length)}</div><div className="text-[12px] text-slate-400">{t("\u0645\u0648\u0627\u0641\u0642\u0629")}</div></div>
-          <div className="rounded-2xl bg-white p-4 shadow-card ring-1 ring-slate-100"><div className="text-2xl font-extrabold text-rose-600">{t(myWork.filter(w=>w.status==='escalated').length)}</div><div className="text-[12px] text-slate-400">{t("\u062a\u0645 \u0627\u0644\u062a\u0635\u0639\u064a\u062f")}</div></div>
-          <div className="rounded-2xl bg-white p-4 shadow-card ring-1 ring-slate-100"><div className="text-2xl font-extrabold text-slate-700">{t(myWork.length)}</div><div className="text-[12px] text-slate-400">{t("\u0625\u062c\u0645\u0627\u0644\u064a \u0627\u0644\u0628\u0646\u0648\u062f")}</div></div>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 sm:gap-3 mb-6">
+          <div className="rounded-2xl bg-white p-3 sm:p-4 shadow-card ring-1 ring-slate-100"><div className="text-xl sm:text-2xl font-extrabold text-amber-600">{t(myWork.filter(w=>w.status==='pending').length)}</div><div className="text-[11px] sm:text-[12px] text-slate-400">{t("معلّق لديّ")}</div></div>
+          <div className="rounded-2xl bg-white p-3 sm:p-4 shadow-card ring-1 ring-slate-100"><div className="text-xl sm:text-2xl font-extrabold text-brand-600">{t(myWork.filter(w=>w.status==='replied').length)}</div><div className="text-[11px] sm:text-[12px] text-slate-400">{t("تم الرد")}</div></div>
+          <div className="rounded-2xl bg-white p-3 sm:p-4 shadow-card ring-1 ring-slate-100"><div className="text-xl sm:text-2xl font-extrabold text-emerald-600">{t(myWork.filter(w=>w.status==='approved').length)}</div><div className="text-[11px] sm:text-[12px] text-slate-400">{t("موافقة")}</div></div>
+          <div className="rounded-2xl bg-white p-3 sm:p-4 shadow-card ring-1 ring-slate-100"><div className="text-xl sm:text-2xl font-extrabold text-rose-600">{t(myWork.filter(w=>w.status==='escalated').length)}</div><div className="text-[11px] sm:text-[12px] text-slate-400">{t("تم التصعيد")}</div></div>
+          <div className="col-span-2 sm:col-span-1 rounded-2xl bg-white p-3 sm:p-4 shadow-card ring-1 ring-slate-100"><div className="text-xl sm:text-2xl font-extrabold text-slate-700">{t(myWork.length)}</div><div className="text-[11px] sm:text-[12px] text-slate-400">{t("إجمالي البنود")}</div></div>
         </div>
         <div className="rounded-2xl bg-white shadow-card ring-1 ring-slate-100 overflow-hidden">
-          <div className="overflow-x-auto"><table className="w-full text-right text-[13px]">
+          <div className="overflow-x-auto"><table className="w-full text-right text-[13px] min-w-[620px]">
             <thead><tr className="text-slate-400 border-b border-slate-100 bg-slate-50/50">
-              <th className="font-medium px-4 py-3">{t("\u0627\u0644\u0628\u0646\u062f")}</th>
-              <th className="font-medium px-4 py-3">{t("\u0645\u0646 \u2190 \u0625\u0644\u0649")}</th>
-              <th className="font-medium px-4 py-3">{t("\u0627\u0644\u0645\u0648\u0639\u062f \u0627\u0644\u0646\u0647\u0627\u0626\u064a")}</th>
-              <th className="font-medium px-4 py-3">{t("\u0627\u0644\u062d\u0627\u0644\u0629")}</th>
-              <th className="font-medium px-4 py-3 text-left">{t("\u0625\u062c\u0631\u0627\u0621")}</th>
+              <th className="font-medium px-4 py-3">{t("البند")}</th>
+              <th className="font-medium px-4 py-3">{t("من ← إلى")}</th>
+              <th className="font-medium px-4 py-3">{t("الموعد النهائي")}</th>
+              <th className="font-medium px-4 py-3">{t("الحالة")}</th>
+              <th className="font-medium px-4 py-3 text-left">{t("إجراء")}</th>
             </tr></thead>
             <tbody className="divide-y divide-slate-50">
               {(myWork || []).map((w, index) => (<React.Fragment key={w.id}>

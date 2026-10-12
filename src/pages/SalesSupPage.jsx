@@ -49,25 +49,25 @@ export default function SalesSupPage() {
   return (
 <section>
         <div className="mb-6">
-          <h1 className="text-2xl font-extrabold text-slate-800">{t("\u0644\u0648\u062d\u0629 \u0645\u0634\u0631\u0641 \u0627\u0644\u0645\u0628\u064a\u0639\u0627\u062a")}</h1>
-          <p className="text-[14px] text-slate-400 mt-1">{t("\u0645\u0631\u0627\u062c\u0639\u0629 \u0639\u0631\u0648\u0636 \u0627\u0644\u0623\u062e\u0635\u0627\u0626\u064a\u064a\u0646 \u00b7 \u0627\u0639\u062a\u0645\u0627\u062f \u0636\u0645\u0646 \u0633\u0642\u0641 \u0627\u0644\u062e\u0635\u0645 \u00b7 \u0625\u0639\u0627\u062f\u0629 \u0627\u0644\u062a\u0648\u062c\u064a\u0647 \u2014 \u0628\u062f\u0648\u0646 \u0635\u0644\u0627\u062d\u064a\u0629 \u0627\u0644\u0632\u064a\u0627\u0631\u0627\u062a \u0627\u0644\u0645\u064a\u062f\u0627\u0646\u064a\u0629 \u0623\u0648 \u0627\u0644\u062a\u0633\u0644\u064a\u0645 \u0627\u0644\u0646\u0647\u0627\u0626\u064a.")}</p>
+          <h1 className="text-xl sm:text-2xl font-extrabold text-slate-800">{t("\u0644\u0648\u062d\u0629 \u0645\u0634\u0631\u0641 \u0627\u0644\u0645\u0628\u064a\u0639\u0627\u062a")}</h1>
+          <p className="text-[13px] sm:text-[14px] text-slate-400 mt-1">{t("\u0645\u0631\u0627\u062c\u0639\u0629 \u0639\u0631\u0648\u0636 \u0627\u0644\u0623\u062e\u0635\u0627\u0626\u064a\u064a\u0646 \u00b7 \u0627\u0639\u062a\u0645\u0627\u062f \u0636\u0645\u0646 \u0633\u0642\u0641 \u0627\u0644\u062e\u0635\u0645 \u00b7 \u0625\u0639\u0627\u062f\u0629 \u0627\u0644\u062a\u0648\u062c\u064a\u0647 \u2014 \u0628\u062f\u0648\u0646 \u0635\u0644\u0627\u062d\u064a\u0629 \u0627\u0644\u0632\u064a\u0627\u0631\u0627\u062a \u0627\u0644\u0645\u064a\u062f\u0627\u0646\u064a\u0629 \u0623\u0648 \u0627\u0644\u062a\u0633\u0644\u064a\u0645 \u0627\u0644\u0646\u0647\u0627\u0626\u064a.")}</p>
         </div>
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-          <div className="rounded-2xl bg-white p-5 shadow-card ring-1 ring-slate-100">
-            <div className="text-[12px] text-slate-400 font-bold">{t("\u0639\u0631\u0648\u0636 \u0628\u0627\u0646\u062a\u0638\u0627\u0631 \u0645\u0631\u0627\u062c\u0639\u062a\u0643")}</div>
-            <div className="text-3xl font-extrabold text-amber-600 mt-1">{t(supQuoteQueue.length)}</div>
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-4 mb-6">
+          <div className="rounded-2xl bg-white p-3.5 sm:p-5 shadow-card ring-1 ring-slate-100">
+            <div className="text-[11px] sm:text-[12px] text-slate-400 font-bold">{t("\u0639\u0631\u0648\u0636 \u0628\u0627\u0646\u062a\u0638\u0627\u0631 \u0645\u0631\u0627\u062c\u0639\u062a\u0643")}</div>
+            <div className="text-xl sm:text-3xl font-extrabold text-amber-600 mt-1">{t(supQuoteQueue.length)}</div>
           </div>
-          <div className="rounded-2xl bg-white p-5 shadow-card ring-1 ring-slate-100">
-            <div className="text-[12px] text-slate-400 font-bold">{t("\u0635\u0641\u0642\u0627\u062a \u062a\u062d\u062a \u0627\u0644\u062a\u0641\u0627\u0648\u0636")}</div>
-            <div className="text-3xl font-extrabold text-violet-600 mt-1">{t(salesOpen.length)}</div>
+          <div className="rounded-2xl bg-white p-3.5 sm:p-5 shadow-card ring-1 ring-slate-100">
+            <div className="text-[11px] sm:text-[12px] text-slate-400 font-bold">{t("\u0635\u0641\u0642\u0627\u062a \u062a\u062d\u062a \u0627\u0644\u062a\u0641\u0627\u0648\u0636")}</div>
+            <div className="text-xl sm:text-3xl font-extrabold text-violet-600 mt-1">{t(salesOpen.length)}</div>
           </div>
-          <div className="rounded-2xl bg-white p-5 shadow-card ring-1 ring-slate-100">
-            <div className="text-[12px] text-slate-400 font-bold">{t("\u0633\u0642\u0641 \u0627\u0644\u062e\u0635\u0645 \u0644\u062f\u064a\u0643")}</div>
-            <div className="text-3xl font-extrabold text-brand-600 mt-1">{t("10\u066a")}</div>
+          <div className="rounded-2xl bg-white p-3.5 sm:p-5 shadow-card ring-1 ring-slate-100">
+            <div className="text-[11px] sm:text-[12px] text-slate-400 font-bold">{t("\u0633\u0642\u0641 \u0627\u0644\u062e\u0635\u0645 \u0644\u062f\u064a\u0643")}</div>
+            <div className="text-xl sm:text-3xl font-extrabold text-brand-600 mt-1">{t("10\u066a")}</div>
           </div>
-          <div className="rounded-2xl bg-white p-5 shadow-card ring-1 ring-slate-100">
-            <div className="text-[12px] text-slate-400 font-bold">{t("\u0645\u062d\u0627\u0644\u0629 \u0644\u0644\u0645\u062f\u064a\u0631")}</div>
-            <div className="text-3xl font-extrabold text-indigo-600 mt-1">{t(mgrQuoteQueue.length)}</div>
+          <div className="rounded-2xl bg-white p-3.5 sm:p-5 shadow-card ring-1 ring-slate-100">
+            <div className="text-[11px] sm:text-[12px] text-slate-400 font-bold">{t("\u0645\u062d\u0627\u0644\u0629 \u0644\u0644\u0645\u062f\u064a\u0631")}</div>
+            <div className="text-xl sm:text-3xl font-extrabold text-indigo-600 mt-1">{t(mgrQuoteQueue.length)}</div>
           </div>
         </div>
 
@@ -76,17 +76,19 @@ export default function SalesSupPage() {
         <h2 className="text-lg font-extrabold text-slate-800 mb-3">{t("\u0637\u0627\u0628\u0648\u0631 \u0645\u0631\u0627\u062c\u0639\u0629 \u0627\u0644\u0639\u0631\u0648\u0636")}</h2>
         <div className="space-y-3 mb-8">
           {(supQuoteQueue || []).map((l, index) => (<React.Fragment key={l.id}>
-            <div className="rounded-2xl bg-white p-5 shadow-card ring-1 ring-slate-100">
-              <div className="flex flex-wrap items-start justify-between gap-3">
+            <div className="rounded-2xl bg-white p-4 sm:p-5 shadow-card ring-1 ring-slate-100">
+              <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3">
                 <div>
                   <b className="text-slate-800">{t(l.client)}</b>
                   <div className="text-[12px] text-slate-400 font-mono mt-0.5" dir="ltr">{t(l.ref+(l.quote?' · '+l.quote.no:''))}</div>
                   <div className="text-[13px] text-slate-500 mt-1">{t(l.need)}</div>
                 </div>
-                <div className="text-left">
-                  <div className="text-[11px] text-slate-400">{t("\u0642\u064a\u0645\u0629 \u0627\u0644\u0639\u0631\u0636")}</div>
-                  <div className="font-extrabold text-slate-800">{t(l.quote?l.quote.amount.toLocaleString()+' ر.س':'—')}</div>
-                  <div className={clsx("text-[12px] font-bold mt-1", (l.quote&&l.quote.discountPct>10)?'text-rose-600':'text-emerald-600')}>{t('خصم '+(l.quote?l.quote.discountPct:0)+'%')}</div>
+                <div className="flex sm:flex-col items-center sm:items-end justify-between sm:justify-start pt-2 sm:pt-0 border-t sm:border-t-0 border-slate-100">
+                  <div className="text-right sm:text-left">
+                    <div className="text-[11px] text-slate-400">{t("\u0642\u064a\u0645\u0629 \u0627\u0644\u0639\u0631\u0636")}</div>
+                    <div className="font-extrabold text-slate-800">{t(l.quote?l.quote.amount.toLocaleString()+' ر.س':'—')}</div>
+                  </div>
+                  <div className={clsx("text-[12px] font-bold sm:mt-1", (l.quote&&l.quote.discountPct>10)?'text-rose-600':'text-emerald-600')}>{t('خصم '+(l.quote?l.quote.discountPct:0)+'%')}</div>
                 </div>
               </div>
 
@@ -134,10 +136,10 @@ export default function SalesSupPage() {
               </React.Fragment>)}
               <textarea className="field mt-3" value={actionNote ?? ""} onChange={(e) => setProp("actionNote", e.target.value)} rows="2" placeholder={t("\u0645\u0644\u0627\u062d\u0638\u0627\u062a \u0627\u0644\u0627\u0639\u062a\u0645\u0627\u062f / \u0627\u0644\u0631\u0641\u0636")}></textarea>
               <div className="flex flex-wrap gap-2 mt-3">
-                <button className="px-3 py-2 rounded-xl bg-emerald-600 text-white text-[12px] font-bold" onClick={() => { supApproveQuote(l); }} type="button">{t("\u0627\u0639\u062a\u0645\u0627\u062f \u0636\u0645\u0646 \u0627\u0644\u0633\u0642\u0641")}</button>
-                <button className="px-3 py-2 rounded-xl bg-amber-50 text-amber-800 text-[12px] font-bold" onClick={() => { supReturnQuote(l); }} type="button">{t("\u0625\u0639\u0627\u062f\u0629 \u0644\u0644\u0623\u062e\u0635\u0627\u0626\u064a \u0644\u0644\u062a\u0639\u062f\u064a\u0644")}</button>
-                <button className="px-3 py-2 rounded-xl bg-indigo-50 text-indigo-700 text-[12px] font-bold" onClick={() => { supEscalateQuote(l); }} type="button">{t("\u062a\u0635\u0639\u064a\u062f \u0644\u0645\u062f\u064a\u0631 \u0627\u0644\u0645\u0628\u064a\u0639\u0627\u062a")}</button>
-                <button className="px-3 py-2 rounded-xl bg-slate-100 text-slate-700 text-[12px] font-bold" onClick={() => { openDrill('lead', l); }} type="button">{t("\u0645\u0644\u0641 \u0627\u0644\u0635\u0641\u0642\u0629")}</button>
+                <button className="flex-1 sm:flex-none text-center px-3 py-2 rounded-xl bg-emerald-600 text-white text-[12px] font-bold" onClick={() => { supApproveQuote(l); }} type="button">{t("\u0627\u0639\u062a\u0645\u0627\u062f \u0636\u0645\u0646 \u0627\u0644\u0633\u0642\u0641")}</button>
+                <button className="flex-1 sm:flex-none text-center px-3 py-2 rounded-xl bg-amber-50 text-amber-800 text-[12px] font-bold" onClick={() => { supReturnQuote(l); }} type="button">{t("\u0625\u0639\u0627\u062f\u0629 \u0644\u0644\u0623\u062e\u0635\u0627\u0626\u064a \u0644\u0644\u062a\u0639\u062f\u064a\u0644")}</button>
+                <button className="flex-1 sm:flex-none text-center px-3 py-2 rounded-xl bg-indigo-50 text-indigo-700 text-[12px] font-bold" onClick={() => { supEscalateQuote(l); }} type="button">{t("\u062a\u0635\u0639\u064a\u062f \u0644\u0645\u062f\u064a\u0631 \u0627\u0644\u0645\u0628\u064a\u0639\u0627\u062a")}</button>
+                <button className="flex-1 sm:flex-none text-center px-3 py-2 rounded-xl bg-slate-100 text-slate-700 text-[12px] font-bold" onClick={() => { openDrill('lead', l); }} type="button">{t("\u0645\u0644\u0641 \u0627\u0644\u0635\u0641\u0642\u0629")}</button>
               </div>
             </div>
           </React.Fragment>))}
@@ -146,7 +148,7 @@ export default function SalesSupPage() {
 
         <h2 className="text-lg font-extrabold text-slate-800 mb-3">{t("\u0625\u0639\u0627\u062f\u0629 \u062a\u0648\u062c\u064a\u0647 \u0627\u0644\u0635\u0641\u0642\u0627\u062a")}</h2>
         <div className="rounded-2xl bg-white shadow-card ring-1 ring-slate-100 overflow-hidden">
-          <div className="overflow-x-auto"><table className="w-full text-right text-[13px]">
+          <div className="overflow-x-auto"><table className="w-full min-w-[650px] text-right text-[13px]">
             <thead><tr className="text-slate-400 border-b border-slate-100 bg-slate-50/50">
               <th className="font-medium px-4 py-3">{t("\u0627\u0644\u0639\u0645\u064a\u0644")}</th><th className="font-medium px-4 py-3">{t("\u0627\u0644\u0645\u0631\u062d\u0644\u0629")}</th><th className="font-medium px-4 py-3">{t("\u0627\u0644\u0642\u064a\u0645\u0629")}</th><th className="font-medium px-4 py-3 text-left">{t("\u0625\u062c\u0631\u0627\u0621")}</th>
             </tr></thead>
@@ -157,7 +159,7 @@ export default function SalesSupPage() {
                   <td className="px-4 py-3"><span className={clsx("text-[11px] font-bold px-2 py-0.5 rounded-full", leadMap[l.stage].c)}>{t(leadMap[l.stage].t)}</span></td>
                   <td className="px-4 py-3 tabular-nums">{t(l.value?l.value.toLocaleString():'—')}</td>
                   <td className="px-4 py-3 text-left">
-                    <button className="text-[12px] font-bold text-brand-700 bg-brand-50 px-3 py-1.5 rounded-lg" onClick={() => { supReassignLead(l); }} type="button">{t("\u0625\u0639\u0627\u062f\u0629 \u062a\u0648\u062c\u064a\u0647 / \u0645\u062a\u0627\u0628\u0639\u0629")}</button>
+                    <button className="text-[12px] font-bold text-brand-700 bg-brand-50 px-3 py-1.5 rounded-lg whitespace-nowrap" onClick={() => { supReassignLead(l); }} type="button">{t("\u0625\u0639\u0627\u062f\u0629 \u062a\u0648\u062c\u064a\u0647 / \u0645\u062a\u0627\u0628\u0639\u0629")}</button>
                   </td>
                 </tr>
               </React.Fragment>))}

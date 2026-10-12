@@ -58,15 +58,15 @@ export default function WorkersPage() {
             <button className="px-4 py-2.5 rounded-xl bg-white border border-slate-200 text-slate-700 text-[13px] font-bold hover:bg-slate-50 transition-colors" onClick={() => { openDrill('requestLabor'); }}>{t("\u0637\u0644\u0628 \u0639\u0645\u0627\u0644\u0629 \u0625\u0636\u0627\u0641\u064a\u0629")}</button>
           </div>
         </div>
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-          <div className="rounded-2xl bg-white p-4 shadow-card ring-1 ring-slate-100"><div className="text-2xl font-extrabold text-slate-800">{t(workers.length)}</div><div className="text-[12px] text-slate-400">{t("\u0627\u0644\u0625\u062c\u0645\u0627\u0644\u064a")}</div></div>
-          <div className="rounded-2xl bg-white p-4 shadow-card ring-1 ring-slate-100"><div className="text-2xl font-extrabold text-emerald-600">{t(activeWorkers)}</div><div className="text-[12px] text-slate-400">{t("\u0646\u0634\u0637")}</div></div>
-          <div className="rounded-2xl bg-white p-4 shadow-card ring-1 ring-slate-100"><div className="text-2xl font-extrabold text-violet-600">{t(workers.filter(w=>w.status==='leave').length)}</div><div className="text-[12px] text-slate-400">{t("\u0625\u062c\u0627\u0632\u0629")}</div></div>
-          <div className="rounded-2xl bg-white p-4 shadow-card ring-1 ring-slate-100"><div className="text-2xl font-extrabold text-amber-600">{t(workers.filter(w=>w.status==='pending'||w.status==='expired').length)}</div><div className="text-[12px] text-slate-400">{t("\u064a\u062d\u062a\u0627\u062c \u0645\u062a\u0627\u0628\u0639\u0629")}</div></div>
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-4 mb-6">
+          <div className="rounded-2xl bg-white p-3.5 sm:p-4 shadow-card ring-1 ring-slate-100"><div className="text-xl sm:text-2xl font-extrabold text-slate-800">{t(workers.length)}</div><div className="text-[11px] sm:text-[12px] text-slate-400">{t("الإجمالي")}</div></div>
+          <div className="rounded-2xl bg-white p-3.5 sm:p-4 shadow-card ring-1 ring-slate-100"><div className="text-xl sm:text-2xl font-extrabold text-emerald-600">{t(activeWorkers)}</div><div className="text-[11px] sm:text-[12px] text-slate-400">{t("نشط")}</div></div>
+          <div className="rounded-2xl bg-white p-3.5 sm:p-4 shadow-card ring-1 ring-slate-100"><div className="text-xl sm:text-2xl font-extrabold text-violet-600">{t(workers.filter(w=>w.status==='leave').length)}</div><div className="text-[11px] sm:text-[12px] text-slate-400">{t("إجازة")}</div></div>
+          <div className="rounded-2xl bg-white p-3.5 sm:p-4 shadow-card ring-1 ring-slate-100"><div className="text-xl sm:text-2xl font-extrabold text-amber-600">{t(workers.filter(w=>w.status==='pending'||w.status==='expired').length)}</div><div className="text-[11px] sm:text-[12px] text-slate-400">{t("يحتاج متابعة")}</div></div>
         </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 mb-6">
           {(workers || []).map((w, index) => (<React.Fragment key={'card-'+w.id}>
-            <button className="text-right rounded-2xl bg-white p-5 shadow-card ring-1 ring-slate-100 hover:ring-brand-300 hover:-translate-y-0.5 transition-all" onClick={() => { openDrill('worker', w); }} type="button">
+            <button className="text-right rounded-2xl bg-white p-4 sm:p-5 shadow-card ring-1 ring-slate-100 hover:ring-brand-300 hover:-translate-y-0.5 transition-all" onClick={() => { openDrill('worker', w); }} type="button">
               <div className="flex items-start justify-between gap-2">
                 <div><b className="text-slate-800">{t(w.name)}</b><div className="text-[12px] text-slate-400 mt-0.5">{t(w.job+' · '+w.nat)}</div></div>
                 <span className={clsx("text-[11px] font-bold px-2 py-0.5 rounded-full", statusMap[w.status].c)}>{t(statusMap[w.status].t)}</span>
@@ -75,12 +75,12 @@ export default function WorkersPage() {
                 <div>📍 <span>{t(w.location)}</span></div>
                 <div>🛏 <span>{t(w.room)}</span></div>
               </div>
-              <div className="mt-3 text-[11px] font-bold text-brand-600">{t("\u0627\u0636\u063a\u0637 \u0644\u0644\u062a\u0641\u0627\u0635\u064a\u0644 \u0648\u0627\u0644\u0646\u0642\u0644 \u0648\u0627\u0644\u0625\u062c\u0631\u0627\u0621\u0627\u062a \u2190")}</div>
+              <div className="mt-3 text-[11px] font-bold text-brand-600">{t("اضغط للتفاصيل والنقل والإجراءات ←")}</div>
             </button>
           </React.Fragment>))}
         </div>
         <div className="rounded-2xl bg-white shadow-card ring-1 ring-slate-100 overflow-hidden">
-          <div className="overflow-x-auto"><table className="w-full text-right text-[13px]">
+          <div className="overflow-x-auto"><table className="w-full text-right text-[13px] min-w-[700px]">
             <thead><tr className="text-slate-400 border-b border-slate-100 bg-slate-50/50">
               <th className="font-medium px-5 py-3.5">{t("\u0627\u0644\u0639\u0627\u0645\u0644")}</th><th className="font-medium px-5 py-3.5">{t("\u0627\u0644\u0639\u0642\u062f")}</th><th className="font-medium px-5 py-3.5">{t("\u0627\u0644\u0645\u0648\u0642\u0639")}</th><th className="font-medium px-5 py-3.5">{t("\u0627\u0644\u0633\u0643\u0646")}</th><th className="font-medium px-5 py-3.5">{t("\u0627\u0644\u0625\u0642\u0627\u0645\u0629")}</th><th className="font-medium px-5 py-3.5">{t("\u0627\u0644\u062d\u0627\u0644\u0629")}</th><th className="font-medium px-5 py-3.5 text-left">{t("\u0627\u0644\u062a\u0641\u0627\u0635\u064a\u0644")}</th>
             </tr></thead>
